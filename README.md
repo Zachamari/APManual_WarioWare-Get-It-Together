@@ -44,6 +44,7 @@ Both goals may be set to additionally require the 3 Golden Treasures in order to
   - Playing (4) or reaching the Expert and Master Mission scores (3 each) in each Variety Pack minigame
 
 # Notes and Known Issues
+- Anything Goes locations still appear if Anything Goes is your goal. If you have Golden Treasures on, this may require you to play Anything Goes before being able to goal in order to get its checks. I noticed this right before uploading the apworld, this should hopefully be fixed soon.
 - Due to restrictions for certain symbols in json formatting, some microgames and challenges had to have their names slightly changed. Any names containing commas (,) or colons (:) had to have those characters removed. For consistency's sake, those characters are currently just straight-up missing and aren't replaced with anything.
 - If Play-o-Pedia checks are set to require the individual microgames, generation slows down substantially due to the overly restrictive logic, especially if only one type of Play-o-Pedia check is included. To speed up generation in public games with this setting on, it's recommended to include at least two types of PoP checks (i.e. ['any','solo']). (For smaller multiworlds if you don't mind longer gen times, don't worry about it)
 - "Look Both Ways" is the name of both a microgame and a Wario Cup Challenge. The challenge is called "Look Both Ways (Challenge)" while the microgame is just called "Look Both Ways".
