@@ -43,9 +43,10 @@ Both goals may be set to additionally require the 3 Golden Treasures in order to
   - Clearing each Wario Cup Challenge with Bronze and Gold (52 each)
   - Playing (4) or reaching the Expert and Master Mission scores (3 each) in each Variety Pack minigame
 
-# Known Issues
+# Notes and Known Issues
 - Due to restrictions for certain symbols in json formatting, some microgames and challenges had to have their names slightly changed. Any names containing commas (,) or colons (:) had to have those characters removed. For consistency's sake, those characters are currently just straight-up missing and aren't replaced with anything.
 - If Play-o-Pedia checks are set to require the individual microgames, generation slows down substantially due to the overly restrictive logic, especially if only one type of Play-o-Pedia check is included. To speed up generation in public games with this setting on, it's recommended to include at least two types of PoP checks (i.e. ['any','solo']). (For smaller multiworlds if you don't mind longer gen times, don't worry about it)
+- "Look Both Ways" is the name of both a microgame and a Wario Cup Challenge. The challenge is called "Look Both Ways (Challenge)" while the microgame is just called "Look Both Ways".
 
 # To Do
 - Add a setting like Pokemon games' Trainersanity ranges for included Play-o-Pedia microgames, to allow more customizability in number of checks
