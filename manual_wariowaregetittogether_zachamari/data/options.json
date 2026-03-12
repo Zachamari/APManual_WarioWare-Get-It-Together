@@ -1,0 +1,220 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ManualForArchipelago/Manual/main/schemas/Manual.options.schema.json",
+    "_comment": "Add a _ before an option name to comment it out and it wont be added to the apworld",
+    "core": {
+        "goal":{
+            "_comment": [
+                "Using 'goal' as the name of an option let you override some of the generated goal parameters"
+            ],
+            "display_name": "Goal",
+            "description": [
+                "Wario Bug - Unlock and clear Anything Goes.",
+                "Showdown - Collect every crew member (aside from Pyoro), then unlock and clear Showdown."
+            ],
+            "aliases": {"easiest": 0},
+            "hidden": false
+        },
+        "death_link": {
+            "default": false
+        },
+        "filler_traps": {
+            "_comment": "Using values here let you set a 'recommended' filler_trap percentage or even a default percentage",
+            "values": {
+                "recommended": 20
+            }
+        }
+    },
+    "user": {
+        "_commented_out_option":{
+            "type": "Toggle",
+            "default": true
+        },
+        "_Example_Toggle":{
+            "description": [
+                "This is a Toggle",
+                "A simple boolean, aka True or False set the initial value with \"default\""
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Example Options"
+        },        
+        "_Lock_Modes":{
+            "description": [
+                "This setting was removed because it makes gen for a solo game take over 2 minutes.",
+                "When True, all modes (aside from Story Mode) are locked initally. You must receive each mode in order to play them."
+            ],
+            "type": "Toggle",
+            "default": false
+        },        
+        "Require_Golden_Watering_Can":{
+            "description": [
+                "When True, the goal stage is only accessible after collecting the 3 parts of the Golden Watering Can.",
+                "These are the Golden Beehive, the Golden Toilet Paper Roll, and the Golden Holey Mug.",
+                "This setting works whether your goal is Showdown or Wario Bug."
+            ],
+            "type": "Toggle",
+            "default": true,
+            "group": "Story Mode"
+        },     
+        "Include_PlayoPedia":{
+            "description": [
+                "Whether to include Play-o-pedia microgames in the randomizer.",
+                "Scoring enough to pass the target score on each individual microgame is a check.",
+                "Note that this adds, at minimum, 222 checks.",
+                "Requires at least one type of check to be specified in PoP_Checks."
+            ],
+            "type": "Toggle",
+            "default": true,
+            "group": "Play-o-Pedia"
+        },
+        "PoP_Unlocks":{
+            "type": "Choice",
+            "description": [
+                "Determines how microgames are unlocked. Does nothing if the Play-o-pedia is not included.",
+                "'starting' - All microgame checks are available at the start of the game, provided you have the required crew members. (Warning: May add lots of sphere 1 checks!)",
+                "'by_category' - Microgames are received by category. For example, receiving 'Play-o-pedia Sports' will unlock all Sports microgames at once.",
+                "'individually' - Microgames are unlocked individually."
+            ],
+            "values": {
+                "starting":0,
+                "by_category":1,
+                "individually":2
+             },
+            "default": 2,
+            "allow_custom_value": false,
+            "group": "Play-o-Pedia"
+        },               
+        "Include_Wario_Cup":{
+            "type": "Choice",
+            "description": [
+                "Whether to include Wario Cup challenges in the randomizer.",
+                "'off' - Wario Cup challenges are not included.'",
+                "'bronze' - Clearing each challenge with bronze is a check. Adds 52 checks.",
+                "'gold' - Clearing each challenge with bronze is a check, and earning a gold trophy on each challenge is an additional check. Adds 104 checks."
+            ],
+            "values": {
+                "off":0,
+                "bronze":1,
+                "gold":2
+             },
+            "default": 1,
+            "allow_custom_value": false,
+            "group": "Wario Cup"
+        },
+        "Wario_Cup_Unlocks":{
+            "type": "Choice",
+            "description": [
+                "Determines how Wario Cup challenges are unlocked. Does nothing if Wario Cup is not included.",
+                "'starting' - All Wario Cup challenges are available at the start of the game. Some challenges require certain characters, so not all will be completable immediately.",
+                "'individually' - Challenges are unlocked individually."
+            ],
+            "values": {
+                "starting":0,
+                "individually":1
+             },
+            "default": 1,
+            "allow_custom_value": false,
+            "group": "Wario Cup"
+        },             
+        "Include_Variety_Pack":{
+            "type": "Choice",
+            "description": [
+                "Whether to include Variety Pack minigames in the randomizer.",
+                "'off' - Variety Pack minigames are not included.'",
+                "'clears' - Playing each minigame once is a check.",
+                "'expert' - Playing each minigame once is a check, and scoring highly enough to clear the minigame's Expert mission is an additional check.",
+                "'master' - Playing each minigame once is a check, and scoring highly enough to clear the minigame's Expert and Master missions are an additional 2 checks.",
+                "(Scores required for these missions can be seen in the Missions menu ingame, and are also included in the names for the checks.)"
+            ],
+            "values": {
+                "off":0,
+                "clears":1,
+                "expert":2,
+                "master":3
+             },
+            "default": 1,
+            "allow_custom_value": false,
+            "group": "Variety Pack"
+        },
+        "Variety_Pack_Unlocks":{
+            "type": "Choice",
+            "description": [
+                "Determines how Variety Pack minigames are unlocked. Does nothing if Variety Pack is not included.",
+                "'starting' - All Variety Pack minigames are available at the start of the game and will all be sphere 1 checks.",
+                "'individually' - Minigames are unlocked individually.",
+                "Additional note: Daily Grind currently does not logically require any crew members and can be played as soon as the minigame is unlocked."
+            ],
+            "values": {
+                "starting":0,
+                "individually":1
+             },
+            "default": 1,
+            "allow_custom_value": false,
+            "group": "Variety Pack"
+        },     
+        "_Variety_Pack_Per_Character":{
+            "type": "Choice",
+            "description": [
+                "Not implemented yet.",
+                "Adds additional checks for clearing each Variety Pack minigame with each character. Daily Grind is not included in this option.",
+                "'off' - All Variety Pack checks can be done with any character.",
+                "'clears' - Clearing each minigame with each character is a check.",
+                "'expert' - Playing each minigame once with each character is a check, and scoring highly enough to clear the minigame's Expert mission with each character is an additional check.",
+                "'master' - Playing each minigame once with each character is a check, and scoring highly enough to clear the minigame's Expert and Master missions with each character are additional checks.",
+                "(Master difficulty is not recommended.)"
+            ],
+            "values": {
+                "off":0,
+                "clears":1,
+                "expert":2,
+                "master":3
+             },
+            "default": 0,
+            "allow_custom_value": false,
+            "group": "Variety Pack"
+        },     
+        "_Example_Choice":{
+            "type": "Choice",
+            "description": [
+                "This is a Choice",
+                "Let the user pick from a list of values",
+                "allow_custom_value let a player define their own text value",
+                "Currently the only use for Choice in Manual outside of hooks is the goal"
+            ],
+            "values": {
+                "start":0,
+                "test":1
+             },
+            "default": 0,
+            "allow_custom_value": false,
+            "group": "Example Options"
+        },
+        "_Example_Range":{
+            "type": "Range",
+            "description": [
+                "This is a Range",
+                "Allow the player to specify a value between 'start' and 'end'",
+                "if you include a \"values\" you can define the label for certain values",
+                "Currently the only use for Range in Manual outside of hooks is 'filler_trap'"
+            ],
+            "range_start": 0,
+            "default": 1,
+            "range_end": 10,
+            "values": {"example": 2},
+            "group": "Example Options"
+        },
+
+        "_DLC_enabled":{
+            "display_name": "DLC Enabled",
+            "description": "Is the Dlc enabled?",
+            "type": "Toggle",
+            "visibility": [
+                "simple_ui",
+                "complex_ui",
+                "template"
+            ],
+            "default": true
+        }
+    }
+
+}

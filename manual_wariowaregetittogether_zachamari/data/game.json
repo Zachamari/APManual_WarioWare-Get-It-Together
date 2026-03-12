@@ -1,0 +1,19 @@
+{
+  "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.game.schema.json",
+  "game": "WarioWareGetItTogether",
+  "creator": "Zachamari",
+  "filler_item_name": "Prezzy",
+  "starting_items": [
+    {
+      "item_categories": [
+        "Crew Members"
+      ],
+      "random": 3
+    },
+    {
+      "items": [
+        "Intro Games"
+      ]
+    }
+  ]
+}
