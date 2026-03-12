@@ -2,7 +2,9 @@
 This is a manual Archipelago integration for WarioWare: Get It Together!
 
 # How to Play
-This is a manual integration, so the game itself remains unmodified and you must restrict yourself based on the items that you've received. You should only ever choose crew members and stages you have unlocked from the multiworld. For more information about manual AP integrations, check out the manual repository here:
+This is a manual apworld, so the game itself remains unmodified and you must restrict yourself based on the items that you've received. You should only ever choose crew members and stages you have unlocked from the multiworld. 
+
+This apworld was made with the latest stable release of Manual. For more information about Manual, check the repository here:
 
 https://github.com/ManualForArchipelago/Manual
 
