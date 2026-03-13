@@ -8,7 +8,7 @@
             ],
             "display_name": "Goal",
             "description": [
-                "Wario Bug - Unlock and clear Anything Goes.",
+                "Wario Bug - Unlock and clear the first boss of Anything Goes.",
                 "Showdown - Collect every crew member (aside from Pyoro), then unlock and clear Showdown."
             ],
             "aliases": {"easiest": 0},
@@ -64,7 +64,7 @@
                 "Requires at least one type of check to be specified in PoP_Checks."
             ],
             "type": "Toggle",
-            "default": true,
+            "default": false,
             "group": "Play-o-Pedia"
         },
         "PoP_Unlocks":{
@@ -97,7 +97,7 @@
                 "bronze":1,
                 "gold":2
              },
-            "default": 1,
+            "default": 0,
             "allow_custom_value": false,
             "group": "Wario Cup"
         },
@@ -132,7 +132,7 @@
                 "expert":2,
                 "master":3
              },
-            "default": 1,
+            "default": 0,
             "allow_custom_value": false,
             "group": "Variety Pack"
         },
