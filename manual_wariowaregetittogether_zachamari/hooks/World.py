@@ -317,7 +317,9 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
                 countdown -= 1
 
 
-
+    chosenGoal = get_option_value(multiworld, player, "goal")
+    if chosenGoal == 0:
+        itemNamesToRemove.append("Showdown")
 
 
     for itemName in itemNamesToRemove:
