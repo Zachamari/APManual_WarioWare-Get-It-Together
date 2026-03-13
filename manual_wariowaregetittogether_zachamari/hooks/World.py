@@ -138,6 +138,15 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
             locationNamesToRemove.append(location_name_groups["Variety Pack Master"][count])
             count += 1
 
+
+    chosenGoal = get_option_value(multiworld, player, "goal")
+
+    if chosenGoal == 0:
+        locationNamesToRemove.append("Anything Goes - Boss 1 Clear")
+        locationNamesToRemove.append("Anything Goes - Boss 2 Clear")
+        locationNamesToRemove.append("Anything Goes - Boss 3 Clear")
+
+
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
